@@ -1,2 +1,4 @@
 # DisMiC
-imakewemake tshs DisMiC Application
+Taguig Science High School
+Disaster Mitigation Cube
+IMakeWeMake Application
