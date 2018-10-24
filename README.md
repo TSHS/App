@@ -1,2 +1,2 @@
 # DisMiC
-imakewemake tshs
+imakewemake tshs DisMiC Application
