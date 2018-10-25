@@ -48,7 +48,7 @@ hr {
 	position: relative;
 	height: 60%;
 	width: auto;
-	margin: 0px;
+	margin: 3px;
 }
 
 .analog_title {
@@ -136,7 +136,7 @@ input[type=range]::-webkit-slider-thumb {
   background: #ffffff;
   cursor: pointer;
   margin-top: -14px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; Add cool effects to your sliders! */
 }
 
 input[type=range]::-webkit-slider-runnable-track {
