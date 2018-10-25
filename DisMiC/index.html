@@ -27,7 +27,7 @@
 
 		<div class="analog">
 			<div class="analog_img">
-				<img src="./images/logofire.png" class="sensors">
+				<img src="./images/logoflame.png" class="sensors">
 			</div>
 			<div class="analog_title">
 				<h2>Fire</h2>
@@ -101,7 +101,7 @@
 			}
 			
 			// 光敏感測
-			lightValue = cpf.get("a0");
+			/*lightValue = cpf.get("a0");
 			document.getElementById("lightValue").innerHTML = lightValue;
 			
 			// 切換光敏狀態
@@ -109,7 +109,7 @@
 				document.getElementById("lightStatus").src= './images/warn.png';
 			}else {
 				document.getElementById("lightStatus").src= './images/nice.png';
-			}
+			} */
 			
 			// 電流感測
 			elecValue = cpf.get("d6");
@@ -132,7 +132,7 @@
 			}
 			
 			// 一氧化碳
-			COValue = cpf.get("a3");
+			/* COValue = cpf.get("a3");
 			document.getElementById("COValue").innerHTML = COValue;
 			
 			// 切換一氧化碳狀態
@@ -142,7 +142,7 @@
 				document.getElementById("COStatus").src= './images/danger.png';
 			}else {
 				document.getElementById("COStatus").src= './images/nice.png';
-			}
+			} */
 			
 		// 設置loop間隔
 		setTimeout("loop()", 1000);
@@ -151,30 +151,33 @@
 	loop();
 	
 	// 風扇
-	function fan(value) {
+	/*function fan(value) {
 		cpf.request('["analogWrite", 3, ' + Number(value) + ']');
-	}
+	} */
 	
 	// LED開燈
-	lighton.addEventListener('touchstart', function(event) {
+	/*lighton.addEventListener('touchstart', function(event) {
 		lighton.src= './images/light_on.png';
 		lightoff.src= './images/lightoff.png';
 		cpf.request('["digitalWrite", 2 , 1]');
-	});
+	}); */
 	// LED關燈
+	/*
 	lightoff.addEventListener('touchstart', function(event) {
 		lightoff.src= './images/light_off.png';
 		lighton.src= './images/lighton.png';
 		cpf.request('["digitalWrite", 2 , 0]');
 	});
-	
+	*/
 	// 溫度轉攝氏
+	
+	/*
 	function toCelsius(value) {
 		var resistance = parseFloat((1023-value) * 10000 / value);
 		var temperature = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
 			
 		return temperature.toFixed(2);
-	}
+	} */
 
 	// cpf setup
 	function setup(){
