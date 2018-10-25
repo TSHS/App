@@ -5,7 +5,7 @@ onmessage = function(e) {
 	switch(e.data.request) {
 		case "read":
 			if(cpf){
-				res.tempValue = toCelsius(cpf.get("a1"));
+				res.tempValue = cpf.get("a1");
 				res.lightValue = cpf.get("a0");
 				res.elecValue = cpf.get("a2");
 				res.thief = cpf.get("d7");
