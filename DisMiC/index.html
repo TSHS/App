@@ -138,13 +138,13 @@
 			}*/
 			
 			// 溫度感測
-			tempValue = toCelsius(cpf.get("a1"));
+			tempValue = cpf.get("a1");
 			document.getElementById("tempValue").innerHTML = tempValue;
 			
 			// 切換溫度狀態
-			if (tempValue <= 20 || tempValue >= 35 ) {
+			if (tempValue < 300) {
 				document.getElementById("tempStatus").src= './images/warn.png';
-			}else if ( tempValue <= 15 || tempValue >= 40 ) {
+			}else if ( tempValue < 200) {
 				document.getElementById("tempStatus").src= './images/danger.png';
 			}else {
 				document.getElementById("tempStatus").src= './images/nice.png';
