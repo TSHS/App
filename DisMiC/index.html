@@ -13,42 +13,29 @@
 	<center>
 		<div class="analog">
 			<div class="analog_img">
-				<img src="./images/logoflood2.png" style="width: 60%; top: 18%"class="sensors">
+				<img src="./images/logoflood2.png" style="width: 60%; top: 18%" id="water" class="sensors">
 			</div>
 			<div class="analog_title">
 				<h2>Water Level</h2>
 			</div>
 			<hr>
-			<div class="analog_value" >
-				<img src="./images/nice.png" id="tempStatus" class="status" />
-				<span id="tempValue">32</span><font class="unit">LOL</font>
-			</div>
 		</div>
 
 		<div class="analog">
 			<div class="analog_img">
-				<img src="./images/logoflame.png" style="width: 60%; top: 18%" class="sensors">
+				<img src="./images/logoflame.png" style="width: 60%; top: 18%" id="fire" class="sensors">
 			</div>
 			<div class="analog_title">
 				<h2>Fire</h2>
 			</div>
 			<hr>
-			<div class="analog_value">
-			<img src="./images/warn.png" id="elecStatus" class="status" />
-				<span id="elecValue">390</span><font class="unit">YE</font>
-			</div>
 		</div>
 		<div class="analog">
 			<div class="analog_img">
-				<img src="./images/logoearthquake.png" style="width: 60%; top: 18%" class="sensors">
+				<img src="./images/logoearthquake.png" style="width: 60%; top: 18%" id="earthquake" class="sensors">
 			</div>
 			<div class="analog_title">
 				<h2>Earthquake</h2>
-			</div>
-			<hr>
-			<div class="analog_value">
-				<img src="./images/thief_off.png" id="thief">
-			</div>
 		</div>
 		<p>
 	</center>
@@ -87,22 +74,22 @@
 				alert(result.data.tempValue);
 			}*/
 			
-			/*
+			
 			// 溫度感測
 			tempValue = cpf.get("a1");
-			document.getElementById("tempValue").innerHTML = tempValue;
-			*/
+			// document.getElementById("tempValue").innerHTML = tempValue;
+			
 			
 			// 切換溫度狀態
-			/*
+			
 			if (tempValue < 300) {
-				document.getElementById("tempStatus").src= './images/warn.png';
+				document.getElementById("water").src= './images/yellowlogoflood2.png';
 			}else if ( tempValue < 200) {
-				document.getElementById("tempStatus").src= './images/danger.png';
+				document.getElementById("water").src= './images/redlogoflood2.png';
 			}else {
-				document.getElementById("tempStatus").src= './images/nice.png';
+				document.getElementById("water").src= './images/logoflood2.png';
 			}
-			*/
+			
 		
 			// 光敏感測
 			/*lightValue = cpf.get("a0");
@@ -115,27 +102,27 @@
 				document.getElementById("lightStatus").src= './images/nice.png';
 			} */
 			
-			/*
+			
 			// 電流感測
 			elecValue = cpf.get("d6");
-			document.getElementById("elecValue").innerHTML = elecValue;
+			// document.getElementById("elecValue").innerHTML = elecValue;
 			
 			// 切換電流狀態
 			if (elecValue == 0) {
-				document.getElementById("elecStatus").src= './images/warn.png';
+				document.getElementById("fire").src= './images/redlogoflame.png';
 			}
 			else {
-				document.getElementById("elecStatus").src= './images/nice.png';
+				document.getElementById("fire").src= './images/logoflame.png';
 			}
 			
 			// 人體感測
 			thief = cpf.get("d7");
 			if(thief == 1) {
-				document.getElementById("thief").src = './images/thief_on.png';
+				document.getElementById("earthquake").src = './images/redlogoearthquake.png';
 			}else {
-				document.getElementById("thief").src = './images/thief_off.png';
+				document.getElementById("earthquake").src = './images/logoearthquake.png';
 			}
-			*/
+			
 			
 			// 一氧化碳
 			/* COValue = cpf.get("a3");
@@ -151,7 +138,7 @@
 			} */
 			
 		// 設置loop間隔
-		setTimeout("loop()", 1000);
+		setTimeout("loop()", 500); //edit 500 (1000 recommended)
 	}
 	
 	loop();
