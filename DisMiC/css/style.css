@@ -359,5 +359,6 @@ input[type=range]::-webkit-slider-runnable-track {
 	}
 	html {
 		background-image: url("../images/newbg_phone.png");
+		background-size: 100% 202%;
 	}
 }
