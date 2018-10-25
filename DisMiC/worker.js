@@ -7,7 +7,7 @@ onmessage = function(e) {
 			if(cpf){
 				res.tempValue = cpf.get("a1");
 				res.lightValue = cpf.get("a0");
-				res.elecValue = cpf.get("a2");
+				res.elecValue = cpf.get("d6");
 				res.thief = cpf.get("d7");
 				res.COValue = cpf.get("a3");
 			}
@@ -20,7 +20,7 @@ onmessage = function(e) {
 
 function setup(){
 		if(cpf)
-			cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 3, "INPUT"],["setPinMode", "digital", 2,"OUTPUT"],["setPinMode", "digital", 3,"PWM"],["setPinMode", "digital", 7,"INPUT"]');
+			cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 3, "INPUT"],["setPinMode", "digital", 2,"OUTPUT"],["setPinMode", "digital", 3,"PWM"],["setPinMode", "digital", 7,"INPUT"],["setPinMode", "digital", 6,"INPUT"]');
 		
 }
 
