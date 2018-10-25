@@ -359,7 +359,7 @@ input[type=range]::-webkit-slider-runnable-track {
 	}
 	html {
 		background-image: url("../images/bg_phonecut.png");
-		background-size: 100% 440%;
+		background-size: 100% 100%;
 		background-color: rgb(0, 63, 63);
 	}
 }
