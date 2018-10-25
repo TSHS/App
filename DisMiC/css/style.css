@@ -359,6 +359,7 @@ input[type=range]::-webkit-slider-runnable-track {
 	}
 	html {
 		background-image: url("../images/newbg_phone.png");
-		background-size: 100% 400%;
+		background-size: 100% 300%;
+		background-color: rgb(0, 63, 63);
 	}
 }
