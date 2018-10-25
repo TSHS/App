@@ -359,7 +359,7 @@ input[type=range]::-webkit-slider-runnable-track {
 	}
 	html {
 		background-image: url("../images/stretchdis.png");
-		background-size: 100% 425%;
+		background-size: 100% 440%;
 		background-color: rgb(0, 63, 63);
 	}
 }
