@@ -42,7 +42,7 @@
 				<img src="./images/elec.png" class="sensors">
 			</div>
 			<div class="analog_title">
-				<h2>Electricity</h2>
+				<h2>Fire</h2>
 			</div>
 			<hr>
 			<div class="analog_value">
@@ -162,15 +162,14 @@
 			}
 			
 			// 電流感測
-			elecValue = cpf.get("a2");
+			elecValue = cpf.get("d6");
 			document.getElementById("elecValue").innerHTML = elecValue;
 			
 			// 切換電流狀態
-			if (elecValue >= 500 ) {
+			if (elecValue == 1) {
 				document.getElementById("elecStatus").src= './images/warn.png';
-			}else if ( elecValue >= 1000 ) {
-				document.getElementById("elecStatus").src= './images/danger.png';
-			}else {
+			}
+			else {
 				document.getElementById("elecStatus").src= './images/nice.png';
 			}
 			
