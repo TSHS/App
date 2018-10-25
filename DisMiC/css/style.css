@@ -46,7 +46,7 @@ hr {
 
 .analog_img {
 	position: relative;
-	height: 52%;
+	height: auto;
 	width: auto;
 	margin: 0px;
 }
